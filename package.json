@@ -1,0 +1,30 @@
+{
+  "name": "play26_js",
+  "version": "1.0.0",
+  "description": "template for my project",
+  "main": "application-all.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Daisuke Shimada",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^8.0.53",
+    "css-loader": "^0.28.7",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "uglifyjs-webpack-plugin": "^1.1.2",
+    "vue": "^2.5.9",
+    "vue-loader": "^13.5.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.2.9",
+    "ts-loader": "https://registry.npmjs.org/ts-loader/-/ts-loader-2.3.0.tgz",
+    "typescript": "^2.4.1",
+    "vue-template-compiler": "^2.5.9",
+    "webpack": "^3.3.0"
+  }
+}

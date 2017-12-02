@@ -1,0 +1,8 @@
+@import base._
+@(flash: Flash, title: String, scripts: Html = Html(""))(content: Html)(implicit m: Messages, request: RequestHeader, app: play.api.Application, assets: AssetsFinder)
+
+@main(flash, title, scripts) {
+	<div class="container-fluid">
+	@content
+	</div>
+}

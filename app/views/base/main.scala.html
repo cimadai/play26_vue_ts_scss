@@ -1,0 +1,40 @@
+@(flash: Flash, title: String, scripts: Html)(content: Html)(implicit m: Messages, request: RequestHeader, app: play.api.Application, assets: AssetsFinder)
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@title</title>
+	<base href="@controllers.routes.AppPage.index">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="@assets.path("stylesheets/main.css")">
+
+
+	<link rel="shortcut icon" type="image/png" href="@assets.path("images/favicon.png")">
+</head>
+<body>
+	<div>
+		@for(message <- flash.get("error"))   { <p class="notify hidden danger">@m(message)</p> }
+		@for(message <- flash.get("success")) { <p class="notify hidden success">@m(message)</p> }
+	</div>
+
+    @content
+
+	@if(app.mode == play.api.Mode.Prod) {
+        <script src="@assets.path("js/application-all.min.js")" type="text/javascript"></script>
+    } else {
+        <script src="@assets.path("js/application-all.js")" type="text/javascript"></script>
+    }
+
+	@scripts
+
+	<div class="footer">
+		<div class="footer-inner">
+			<div class="container">
+				<div class="row">
+				</div> <!-- /row -->
+			</div> <!-- /container -->
+		</div> <!-- /footer-inner -->
+	</div> <!-- /footer -->
+</body>
+</html>

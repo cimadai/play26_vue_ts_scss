@@ -1,0 +1,11 @@
+@import base._
+@(flash: Flash)(implicit m: Messages, request: RequestHeader, app: play.api.Application, assets: AssetsFinder)
+
+@title = @{m("title.application")}
+@scripts = @{Html("")}
+
+@fluid_main(flash, title, scripts) {
+    <div id="top">
+        <top></top>
+    </div>
+}

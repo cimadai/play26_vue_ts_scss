@@ -1,0 +1,57 @@
+// scss-lint:disable VendorPrefix
+
+$fa-font-path: '../fonts/font-awesome/';
+
+@import 'third_party/bootstrap.min';
+@import 'third_party/font-awesome.min';
+
+$common-background-color: #fff;
+$bootstrap-error-color: #a94442;
+
+@font-face {
+  font-family: "mplus1c";
+  src: url("../fonts/rounded-x-mplus-1c-regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "mplus1c";
+  src: url("../fonts/rounded-x-mplus-1c-bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+$footer-height: 51px;
+
+body {
+  background-color: white;
+  margin-bottom: $footer-height;
+  border-top: solid 5px #000;
+
+  * {
+    font-family: "mplus1c", serif;
+  }
+}
+
+.footer {
+  bottom: 0;
+  height: $footer-height; // Set the fixed height of the footer here
+  position: absolute;
+  width: 100%;
+
+  b {
+    font-size: 120%;
+    line-height: 40px;
+  }
+
+  span {
+    font-size: 90%;
+    font-style: italic;
+    line-height: 40px;
+  }
+}
+
